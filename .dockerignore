@@ -1,0 +1,12 @@
+.idea
+./src/test
+./target
+!target/distributedCacheSystem-0.0.1-SNAPSHOT.jar
+Dockerfile.bak
+HELP.md
+mvnw
+mvnw.cmd
+.gitignore
+sdcs-test.sh
+./src/main/resources/static
+./src/main/resources/templates

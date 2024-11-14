@@ -1,0 +1,48 @@
+version: '3'
+services:
+  baseserver:
+    build:
+      context: .
+      dockerfile: Dockerfile
+
+  server1:
+    image: neocache-baseserver:latest
+    environment:
+      - RPC_PORT=9537
+      - SERVER_PORT=9527
+      - SERVER_NAME=server1
+    ports:
+      - "9527:9527"
+      - "9537:9537"
+    networks:
+      - cachesystemnetwork
+
+  server2:
+    image: neocache-baseserver:latest
+    environment:
+      - RPC_PORT=9538
+      - SERVER_PORT=9528
+      - SERVER_NAME=server2
+    ports:
+      - "9528:9528"
+      - "9538:9538"
+    networks:
+      - cachesystemnetwork
+
+  server3:
+    image: neocache-baseserver:latest
+    environment:
+      - RPC_PORT=9539
+      - SERVER_PORT=9529
+      - SERVER_NAME=server3
+    ports:
+      - "9529:9529"
+      - "9539:9539"
+    networks:
+      - cachesystemnetwork
+
+networks:
+  cachesystemnetwork:
+    driver: bridge
+
+

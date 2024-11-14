@@ -1,0 +1,28 @@
+syntax = "proto3";
+option java_multiple_files = true;
+option java_package = "com.lzy.neocache.utils.grpc";
+
+service RemoteService {
+  rpc Get (RemoteRequest) returns (RemoteResponse);
+  rpc Add(RemoteRequest) returns (RemoteResponse);
+  rpc Delete (RemoteRequest) returns (RemoteResponse);
+}
+
+message RemoteRequest {
+  string key = 1;
+  Data value = 2;
+}
+
+message RemoteResponse {
+  Data value = 1;
+}
+
+message Data {
+  oneof dataValue {
+    string string = 1;
+    ArrayString arrayString = 2 ;
+  }
+}
+message ArrayString {
+  repeated string string_array = 1;
+}

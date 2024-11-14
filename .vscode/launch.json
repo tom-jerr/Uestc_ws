@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CountingBloomFilterTest",
+      "request": "launch",
+      "mainClass": "com.lzy.distributedcachesystem.CountingBloomFilterTest",
+      "projectName": "distributedCacheSystem"
+    },
+    {
+      "type": "java",
+      "name": "MyBloomFilterTest",
+      "request": "launch",
+      "mainClass": "com.lzy.distributedcachesystem.MyBloomFilterTest",
+      "projectName": "distributedCacheSystem"
+    },
+    {
+      "type": "java",
+      "name": "Spring Boot-DistributedCacheSystemApplication<distributedCacheSystem>",
+      "request": "launch",
+      "cwd": "${workspaceFolder}",
+      "mainClass": "com.lzy.distributedcachesystem.DistributedCacheSystemApplication",
+      "projectName": "distributedCacheSystem",
+      "args": "",
+      "envFile": "${workspaceFolder}/.env"
+    }
+  ]
+}
